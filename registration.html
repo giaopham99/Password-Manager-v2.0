@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Password Manager</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <script src="validation.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <h2>Password Manager</h2>
+        </header>
+
+        <div id="main">
+            <form action="createAccount.php" onsubmit="return validateForm()" method="post">
+                <h4>Create an Account</h4>
+                <label>First Name: </label>
+                <input type="text" id="first_name" required>
+                <span id="reqFirst">*</span><br>
+                <span id="msgFirst"> </span><br>
+
+                <label>Last Name: </label>
+                <input type="text" id="last_name"><br>
+                <span id="msgLast"> </span><br>
+
+                <label>E-mail: </label>
+                <input type="text" id="email" placeholder="jake@gmail.com" required>
+                <span id="reqEmail">*</span><br>
+                <span id="msgEmail"> </span><br>
+
+                <label>Username: </label>
+                <input type="text" id="username" required>
+                <span id="reqUser">*</span><br>
+                <span id="msgUser"> </span><br>
+
+                <label>Password: </label>
+                <input type="password" id="password" required>
+                <span id="reqPass">*</span><br>
+                <span id="msgPass"> </span><br>
+
+                <label> Confirm Password: </label>
+                <input type="password" id="confirm" required>
+                <span id="reqPass">*</span><br>
+                <span id="msgConfirm"> </span><br>
+
+                <input type="submit" id="createAccount" value="Create Account"><br>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; Password Manager</p>
+        </footer>
+    </body>
+
+</html>
