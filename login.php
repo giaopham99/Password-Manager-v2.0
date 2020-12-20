@@ -1,3 +1,7 @@
+<?php
+    session_start(); 
+    $error_message = $_SESSION['error_message'];
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +18,11 @@
         </header>
 
         <div id="main">
-            <form action="home.html" method="post">
+            <form action="home.php" method="post">
                 <h4>Log-In</h4>
+                <?php if(!empty($error_message)){?>
+                    <p id="error"><?php echo $error_message;?></p>
+                <?php } ?>
                 <label>Username/E-mail: </label>
                 <input type="text"><br>
                 <label>Password: </label>

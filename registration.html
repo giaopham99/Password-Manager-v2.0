@@ -18,26 +18,26 @@
             <form action="createAccount.php" onsubmit="return validateForm()" method="post">
                 <h4>Create an Account</h4>
                 <label>First Name: </label>
-                <input type="text" id="first_name" required>
+                <input type="text" name="first" id="first_name" required>
                 <span id="reqFirst">*</span><br>
                 <span id="msgFirst"> </span><br>
 
                 <label>Last Name: </label>
-                <input type="text" id="last_name"><br>
+                <input type="text" name="last" id="last_name"><br>
                 <span id="msgLast"> </span><br>
 
                 <label>E-mail: </label>
-                <input type="text" id="email" placeholder="jake@gmail.com" required>
+                <input type="text" name="email" id="email" placeholder="jake@gmail.com" required>
                 <span id="reqEmail">*</span><br>
                 <span id="msgEmail"> </span><br>
 
                 <label>Username: </label>
-                <input type="text" id="username" required>
+                <input type="text" name="user" id="username" required>
                 <span id="reqUser">*</span><br>
                 <span id="msgUser"> </span><br>
 
                 <label>Password: </label>
-                <input type="password" id="password" required>
+                <input type="password" name="pass" id="password" required>
                 <span id="reqPass">*</span><br>
                 <span id="msgPass"> </span><br>
 
