@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 19, 2020 at 04:25 AM
+-- Generation Time: Dec 20, 2020 at 06:05 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `account` (
   `account_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `account_name` varchar(50) NOT NULL,
-  `account_user` varchar(50) NOT NULL,
-  `account_password` varchar(50) NOT NULL,
-  `account_type` varchar(30) NOT NULL
+  `account_name` varbinary(50) NOT NULL,
+  `account_user` varbinary(50) NOT NULL,
+  `account_password` varbinary(50) NOT NULL,
+  `account_type` varbinary(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -44,10 +44,11 @@ CREATE TABLE `account` (
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
-  `first_name` varchar(20) NOT NULL,
-  `last_name` varchar(25) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `first_name` varbinary(20) NOT NULL,
+  `last_name` varbinary(25) DEFAULT NULL,
+  `email` varbinary(50) NOT NULL,
+  `username` varbinary(50) NOT NULL,
+  `pass` varbinary(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -81,7 +82,7 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
